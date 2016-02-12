@@ -1,0 +1,2 @@
+module NepalHelper
+end

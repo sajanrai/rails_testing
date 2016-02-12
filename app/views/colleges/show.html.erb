@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @college.faculty %>
+</p>
+
+<p>
+  <strong>Students:</strong>
+  <%= @college.students %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @college.sex %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @college.dob %>
+</p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @college.hour %>
+</p>
+
+<p>
+  <strong>More:</strong>
+  <%= @college.more %>
+</p>
+
+<%= link_to 'Edit', edit_college_path(@college) %> |
+<%= link_to 'Back', colleges_path %>
