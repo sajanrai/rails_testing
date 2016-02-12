@@ -1,10 +1,10 @@
 class EmployeesController < ApplicationController
 	def index
-    @employees = Employee.all
-  end
+		@employees = Employee.all
+	end
 
 	def new
-	@employee = Employee.new	
+		@employee = Employee.new	
 	end
 
 	def show
@@ -12,22 +12,22 @@ class EmployeesController < ApplicationController
 	end
 
 	def employee_params
-	params.require(:employee).permit(:firstname, :lastname, :age)
+		params.require(:employee).permit(:firstname, :lastname, :age)
 	end
 
 	def create
-	@employee = Employee.new(employee_params)
-     @employee.save
-        redirect_to @employee   
+		@employee = Employee.new(employee_params)
+		@employee.save
+		redirect_to @employee   
 	end
 
 	def set_employee
-      @employee = Employee.find(params[:id])
-    end
+		@employee = Employee.find(params[:id])
+	end
 
-    def destroy
-    	@employee=Employee.destroy
+	def destroy
+		@employee=Employee.find(params[:id]).destroy
 
-    end
+	end
 
 end
